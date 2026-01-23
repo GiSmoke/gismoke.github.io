@@ -74,4 +74,11 @@ body {
     border-right: none;
     border-bottom: 1px solid #d4d4d0;
   }
+  .index a {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.index a:not(:last-child) {
+  margin-bottom: 6px;
 }
