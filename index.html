@@ -13,6 +13,41 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+  <!-- INFO OVERLAY -->
+<div id="info-overlay" class="overlay">
+  <div class="overlay-inner">
+    <button class="overlay-close" onclick="closeInfo()">×</button>
+
+    <div class="overlay-content">
+      <h1>Nome Cognome</h1>
+
+      <p>
+        Fashion designer with a product-driven mindset and a design approach
+        centered on the garment itself.
+      </p>
+
+      <p>
+        Qui va tutto il testo lungo: CV, bio, statement, metodo di lavoro.
+        Può essere anche molto lungo, scorre indipendentemente dal sito sotto.
+      </p>
+
+      <p>
+        email@example.com<br>
+        Instagram
+      </p>
+    </div>
+  </div>
+</div>
+  <script>
+  function openInfo() {
+    document.getElementById("info-overlay").style.display = "block";
+  }
+
+  function closeInfo() {
+    document.getElementById("info-overlay").style.display = "none";
+  }
+</script>
+
 <body>
 
   <div class="page">
@@ -22,7 +57,7 @@
       <div class="block">
         <div class="label">Index</div>
         <nav class="index">
-          <a href="#info">00. Information</a>
+          <a href="#" onclick="openInfo()">00. Information</a>
           <a href="#project-01">01. Project One</a>
           <a href="#project-02">02. Project Two</a>
           <a href="#project-03">03. Project Three</a>
