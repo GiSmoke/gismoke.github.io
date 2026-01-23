@@ -82,3 +82,52 @@ body {
 .index a:not(:last-child) {
   margin-bottom: 6px;
 }
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(240,240,235,0.6);
+  backdrop-filter: blur(8px);
+  display: none;
+  z-index: 999;
+}
+
+.overlay-inner {
+  max-width: 700px;
+  margin: 60px auto;
+  background: #efefec;
+  padding: 60px;
+  border: 1px solid #d4d4d0;
+}
+
+.overlay-content h1 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.overlay-content p {
+  max-width: 520px;
+  margin-bottom: 20px;
+}
+
+.overlay-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .overlay-inner {
+    margin: 0;
+    height: 100%;
+    max-width: none;
+    border: none;
+    padding: 40px 24px;
+  }
+}
