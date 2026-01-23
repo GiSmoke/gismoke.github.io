@@ -1,41 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Font (Cargo-like, free) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Nome Cognome</h1>
-    <p class="tagline">Conceptual Fashion / Research / Design</p>
-  </header>
 
-  <main>
-    <section class="intro">
-      <p>
-        Questo portfolio raccoglie una selezione di progetti focalizzati
-        sulla relazione tra corpo, tempo e costruzione.
-      </p>
-    </section>
+  <div class="page">
 
-    <section class="projects">
-      <article>
-        <h2>Project 01</h2>
-        <p>Breve descrizione del progetto.</p>
-      </article>
+    <!-- LEFT: INDEX -->
+    <aside class="left">
+      <div class="block">
+        <div class="label">Index</div>
+        <nav class="index">
+          <a href="#info">00. Information</a>
+          <a href="#project-01">01. Project One</a>
+          <a href="#project-02">02. Project Two</a>
+          <a href="#project-03">03. Project Three</a>
+          <a href="#project-04">04. Project Four</a>
+          <a href="#project-05">05. Project Five</a>
+        </nav>
+      </div>
 
-      <article>
-        <h2>Project 02</h2>
-        <p>Breve descrizione del progetto.</p>
-      </article>
-    </section>
-  </main>
+      <div id="info" class="block info">
+        <div class="label">Info</div>
+        <p>
+          Nome Cognome<br>
+          Fashion / Research / Design
+        </p>
+        <p>
+          email@example.com<br>
+          Instagram
+        </p>
+      </div>
+    </aside>
 
-  <footer>
-    <p>© 2026</p>
-  </footer>
+    <!-- RIGHT: CONTENT -->
+    <main class="right">
+
+      <!-- PROJECT 01 -->
+      <section id="project-01" class="project">
+        <h2 class="project-title">Project One</h2>
+      </section>
+
+      <!-- PROJECT 02 -->
+      <section id="project-02" class="project">
+        <h2 class="project-title">Project Two</h2>
+      </section>
+
+      <!-- PROJECT 03 -->
+      <section id="project-03" class="project">
+        <h2 class="project-title">Project Three</h2>
+      </section>
+
+      <!-- PROJECT 04 -->
+      <section id="project-04" class="project">
+        <h2 class="project-title">Project Four</h2>
+      </section>
+
+      <!-- PROJECT 05 -->
+      <section id="project-05" class="project">
+        <h2 class="project-title">Project Five</h2>
+      </section>
+
+    </main>
+  </div>
+
 </body>
 </html>
