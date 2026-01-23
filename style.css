@@ -64,7 +64,9 @@ body {
   margin: 0 0 40px 0;
 }
 
-/* MOBILE */
+/* --------------------
+   RESPONSIVE (LAYOUT)
+   -------------------- */
 @media (max-width: 800px) {
   .page {
     grid-template-columns: 1fr;
@@ -74,43 +76,46 @@ body {
     border-right: none;
     border-bottom: 1px solid #d4d4d0;
   }
+
   .index a {
-  font-size: 12px;
-  letter-spacing: 0.02em;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+
+  .index a:not(:last-child) {
+    margin-bottom: 6px;
+  }
 }
 
-.index a:not(:last-child) {
-  margin-bottom: 6px;
-}
-
-
-/* INFO OVERLAY */
+/* =========================
+   INFO OVERLAY (DESKTOP)
+   ========================= */
 .overlay {
   position: fixed;
   inset: 0;
   background: rgba(240, 240, 235, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: none;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
 }
 
-/* quando attivo */
 .overlay.active {
-  display: block;
+  display: flex;
 }
 
-/* pannello */
 .overlay-panel {
   position: relative;
   max-width: 720px;
-  margin: 80px auto;
+  max-height: 90vh;
   background: #efefec;
   border: 1px solid #d4d4d0;
   padding: 64px;
+  overflow-y: auto;
 }
 
-/* contenuto */
 .overlay-content {
   max-width: 520px;
 }
@@ -121,7 +126,6 @@ body {
   margin-top: 0;
 }
 
-/* close */
 .overlay-close {
   position: absolute;
   top: 24px;
@@ -132,12 +136,15 @@ body {
   cursor: pointer;
 }
 
-/* mobile */
+/* --------------------
+   OVERLAY MOBILE
+   -------------------- */
 @media (max-width: 720px) {
   .overlay-panel {
-    margin: 0;
+    width: 100%;
     height: 100%;
     max-width: none;
+    max-height: none;
     border: none;
     padding: 40px 24px;
   }
