@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio</title>
 
-  
-  <!-- Font (Cargo-like, free) -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -14,43 +13,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<!-- INFO OVERLAY -->
-<div id="info-overlay" class="overlay" aria-hidden="true">
-  <div class="overlay-panel">
-    <button class="overlay-close" onclick="closeInfo()">×</button>
+<body>
 
-    <div class="overlay-content">
-      <h1>Nome Cognome</h1>
+  <!-- INFO OVERLAY -->
+  <div id="info-overlay" class="overlay" aria-hidden="true">
+    <div class="overlay-panel">
+      <button class="overlay-close" onclick="closeInfo()">×</button>
 
-      <p>
-        Fashion designer with a product-driven mindset and a design approach
-        centered on the garment itself.
-      </p>
+      <div class="overlay-content">
+        <h1>Nome Cognome</h1>
 
-      <p>
-        Qui va il testo lungo: CV, bio, statement. Può scorrere
-        indipendentemente dal sito sotto.
-      </p>
+        <p>
+          Fashion designer with a product-driven mindset and a design approach
+          centered on the garment itself.
+        </p>
 
-      <p>
-        email@example.com<br>
-        Instagram
-      </p>
+        <p>
+          Qui va il testo lungo: CV, bio, statement. Può essere molto lungo
+          e scorre indipendentemente dal sito sotto.
+        </p>
+
+        <p>
+          email@example.com<br>
+          Instagram
+        </p>
+      </div>
     </div>
   </div>
-</div>
-  
-  <script>
-  function openInfo() {
-    document.getElementById("info-overlay").style.display = "block";
-  }
-
-  function closeInfo() {
-    document.getElementById("info-overlay").style.display = "none";
-  }
-</script>
-
-<body>
 
   <div class="page">
 
@@ -67,50 +56,48 @@
           <a href="#project-05">05. Project Five</a>
         </nav>
       </div>
-
-      <div id="info" class="block info">
-        <div class="label">Info</div>
-        <p>
-          Nome Cognome<br>
-          Fashion / Research / Design
-        </p>
-        <p>
-          email@example.com<br>
-          Instagram
-        </p>
-      </div>
     </aside>
 
     <!-- RIGHT: CONTENT -->
     <main class="right">
 
-      <!-- PROJECT 01 -->
       <section id="project-01" class="project">
         <h2 class="project-title">Project One</h2>
       </section>
 
-      <!-- PROJECT 02 -->
       <section id="project-02" class="project">
         <h2 class="project-title">Project Two</h2>
       </section>
 
-      <!-- PROJECT 03 -->
       <section id="project-03" class="project">
         <h2 class="project-title">Project Three</h2>
       </section>
 
-      <!-- PROJECT 04 -->
       <section id="project-04" class="project">
         <h2 class="project-title">Project Four</h2>
       </section>
 
-      <!-- PROJECT 05 -->
       <section id="project-05" class="project">
         <h2 class="project-title">Project Five</h2>
       </section>
 
     </main>
   </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function openInfo() {
+      const overlay = document.getElementById('info-overlay');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeInfo() {
+      const overlay = document.getElementById('info-overlay');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  </script>
 
 </body>
 </html>
