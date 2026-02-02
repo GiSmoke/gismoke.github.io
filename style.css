@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -88,7 +93,7 @@ body {
 }
 
 /* =========================
-   INFO OVERLAY (DESKTOP)
+   INFO OVERLAY
    ========================= */
 .overlay {
   position: fixed;
@@ -114,10 +119,13 @@ body {
   border: 1px solid #d4d4d0;
   padding: 64px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .overlay-content {
   max-width: 520px;
+  width: 100%;
+  font-size: clamp(13px, 2.8vw, 14px);
 }
 
 .overlay-content h1 {
@@ -126,6 +134,18 @@ body {
   margin-top: 0;
 }
 
+/* PRE (info.txt) */
+.info-pre {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 24px 0;
+}
+
+/* CLOSE BUTTON */
 .overlay-close {
   position: absolute;
   top: 24px;
@@ -147,5 +167,9 @@ body {
     max-height: none;
     border: none;
     padding: 40px 24px;
+  }
+
+  .overlay-content {
+    max-width: none;
   }
 }
