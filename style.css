@@ -173,3 +173,27 @@ body {
     max-width: none;
   }
 }
+/* =========================
+   PROJECT CONTENT
+   ========================= */
+
+.project-intro {
+  max-width: 520px;
+  margin: 0 0 64px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #111;
+}
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.project-media img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+}
